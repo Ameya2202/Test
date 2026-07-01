@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoForge | Master Data Structures & Algorithms</title>
+  <meta name="description" content="A modern DSA learning website with roadmaps, topic cards, algorithm demos, and interview practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="AlgoForge home">
+        <span class="brand-mark">AF</span>
+        <span>AlgoForge</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="primary-navigation" class="nav-links">
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#visualizer">Visualizer</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#practice">Practice</a></li>
+      </ul>
+      <a class="nav-cta" href="#practice">Start Learning</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Data Structures & Algorithms</p>
+        <h1>Learn DSA with clear paths, visual intuition, and interview-ready practice.</h1>
+        <p class="hero-copy">
+          AlgoForge turns core computer science concepts into guided modules, quick references, and
+          hands-on problem drills so you can build confidence one pattern at a time.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#roadmap">Follow the roadmap</a>
+          <a class="button secondary" href="#visualizer">Explore demos</a>
+        </div>
+        <dl class="hero-stats" aria-label="Learning highlights">
+          <div>
+            <dt>24</dt>
+            <dd>Core topics</dd>
+          </div>
+          <div>
+            <dt>80+</dt>
+            <dd>Practice prompts</dd>
+          </div>
+          <div>
+            <dt>6</dt>
+            <dd>Interview patterns</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-card" aria-label="Example complexity card">
+        <div class="window-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <pre><code>function binarySearch(nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    if (nums[mid] === target) return mid;
+    if (nums[mid] < target) left = mid + 1;
+    else right = mid - 1;
+  }
+
+  return -1;
+}</code></pre>
+        <div class="complexity">
+          <span>Time: O(log n)</span>
+          <span>Space: O(1)</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="topics" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Core curriculum</p>
+        <h2>Build your foundation topic by topic.</h2>
+        <p>Each card gives you the essential idea, common operations, and when to reach for the structure or pattern.</p>
+      </div>
+      <div class="topic-grid">
+        <article class="topic-card">
+          <span class="topic-icon">[]</span>
+          <h3>Arrays & Strings</h3>
+          <p>Master indexing, sliding windows, two pointers, prefix sums, and in-place transformations.</p>
+          <ul>
+            <li>Access: O(1)</li>
+            <li>Search: O(n)</li>
+            <li>Sort + scan patterns</li>
+          </ul>
+        </article>
+        <article class="topic-card">
+          <span class="topic-icon">{}</span>
+          <h3>Hash Tables</h3>
+          <p>Use key-value lookup for frequency counting, memoization, grouping, and duplicate detection.</p>
+          <ul>
+            <li>Average lookup: O(1)</li>
+            <li>Collision awareness</li>
+            <li>Great for state tracking</li>
+          </ul>
+        </article>
+        <article class="topic-card">
+          <span class="topic-icon">↧</span>
+          <h3>Stacks & Queues</h3>
+          <p>Solve ordering problems with LIFO and FIFO models, from parsing to breadth-first search.</p>
+          <ul>
+            <li>Push/pop: O(1)</li>
+            <li>Monotonic stack</li>
+            <li>Level-order traversal</li>
+          </ul>
+        </article>
+        <article class="topic-card">
+          <span class="topic-icon">⌁</span>
+          <h3>Linked Lists</h3>
+          <p>Practice pointer manipulation, cycle detection, fast/slow pointers, and reversal techniques.</p>
+          <ul>
+            <li>Insert head: O(1)</li>
+            <li>Random access: O(n)</li>
+            <li>Dummy node patterns</li>
+          </ul>
+        </article>
+        <article class="topic-card">
+          <span class="topic-icon">◇</span>
+          <h3>Trees & Heaps</h3>
+          <p>Understand recursion, traversal order, priority queues, binary search trees, and heap invariants.</p>
+          <ul>
+            <li>DFS and BFS</li>
+            <li>Heap top: O(1)</li>
+            <li>Insert heap: O(log n)</li>
+          </ul>
+        </article>
+        <article class="topic-card">
+          <span class="topic-icon">⟲</span>
+          <h3>Graphs & Dynamic Programming</h3>
+          <p>Model relationships, optimize overlapping subproblems, and reason about reachable states.</p>
+          <ul>
+            <li>Topological sort</li>
+            <li>Shortest paths</li>
+            <li>Tabulation vs memoization</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="visualizer" class="section visualizer-section">
+      <div class="section-heading">
+        <p class="eyebrow">Algorithm intuition</p>
+        <h2>See the steps before you memorize the code.</h2>
+      </div>
+      <div class="visualizer">
+        <div class="tabs" role="tablist" aria-label="Algorithm demos">
+          <button class="tab active" type="button" role="tab" aria-selected="true" data-demo="binary">Binary Search</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-demo="bfs">BFS</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-demo="dp">Dynamic Programming</button>
+        </div>
+        <div class="demo-panel">
+          <div>
+            <h3 id="demo-title">Binary Search</h3>
+            <p id="demo-description">
+              Repeatedly cut a sorted search space in half by comparing the middle value with the target.
+            </p>
+            <div class="demo-meta">
+              <span id="demo-time">Time O(log n)</span>
+              <span id="demo-space">Space O(1)</span>
+            </div>
+          </div>
+          <div class="bars" id="demo-bars" aria-label="Algorithm illustration"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap-section">
+      <div class="section-heading">
+        <p class="eyebrow">Study roadmap</p>
+        <h2>A practical sequence for steady progress.</h2>
+      </div>
+      <div class="roadmap">
+        <article>
+          <span>01</span>
+          <h3>Complexity fluency</h3>
+          <p>Compare constant, logarithmic, linear, n log n, quadratic, and exponential growth with real examples.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Linear structures</h3>
+          <p>Arrays, strings, linked lists, stacks, queues, hash maps, and the patterns that combine them.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Recursive thinking</h3>
+          <p>Trace call stacks, define base cases, traverse trees, and convert recursion into iterative solutions.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Graphs and optimization</h3>
+          <p>Use graph traversal, shortest paths, union-find, greedy choices, and dynamic programming states.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="practice" class="section practice-section">
+      <div class="practice-card">
+        <div>
+          <p class="eyebrow">Daily practice</p>
+          <h2>Generate a focused drill for today.</h2>
+          <p>
+            Pick a topic and get a compact challenge prompt with the pattern to practice and complexity target.
+          </p>
+        </div>
+        <form class="practice-form" id="practice-form">
+          <label for="topic-select">Choose a topic</label>
+          <select id="topic-select" name="topic">
+            <option value="arrays">Arrays & Strings</option>
+            <option value="hashing">Hash Tables</option>
+            <option value="trees">Trees</option>
+            <option value="graphs">Graphs</option>
+            <option value="dp">Dynamic Programming</option>
+          </select>
+          <button class="button primary" type="submit">Generate drill</button>
+        </form>
+        <div class="challenge" id="challenge" aria-live="polite">
+          <strong>Prompt:</strong> Find the longest substring without repeating characters.
+          <span>Pattern: sliding window | Target: O(n) time, O(k) space</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for learners who want clean intuition, disciplined practice, and interview confidence.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
