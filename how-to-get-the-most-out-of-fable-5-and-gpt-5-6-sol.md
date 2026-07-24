@@ -119,7 +119,7 @@ On tone, concrete instructions beat abstract instructions. For example, OpenAI s
 
 ## Raise Your Ambition with Fable 5
 
-If these tips are all very clear and practical and that you can go use right away, there is another theme that NLW is starting to see across a lot of the discourse, which is about the level of ambition we're bringing to these most advanced models.
+If these tips are all very clear and practical — things you can go use right away — there is another theme that NLW is starting to see across a lot of the discourse, which is about the level of ambition we're bringing to these most advanced models.
 
 Christine Zhu, an AI UX PM at Intuit, wrote a post called "You're Not Ambitious Enough with Claude." Christine writes: the biggest productivity and capacity unlock in my daily work happened when I went beyond automating busy work to asking Claude to do more high-leverage work.
 
@@ -169,8 +169,8 @@ So what are examples of this? Tariq says that when he starts engaging with Fable
 
 1. **Known knowns** — essentially what is in his prompt; i.e., what do I tell the agent that I want?
 2. **Known unknowns** — what he hasn't figured out yet, but is aware that he hasn't.
-3. **Unknown knowns** — what are so obvious he'd never write it down but would recognize it if he saw it.
-4. **Unknown unknowns** — what hasn't he considered at all.
+3. **Unknown knowns** — what is so obvious he'd never write it down but would recognize it if he saw it.
+4. **Unknown unknowns** — what he hasn't considered at all.
 
 Tariq argues that reducing and planning for unknowns is the skill of agentic coding, and suggests that there are ways to improve upon it. Key to that is helping Claude help you.
 
