@@ -1,0 +1,41 @@
+{
+  "name": "opsswarm",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Resilient multi-agent incident-triage application",
+  "packageManager": "pnpm@10.33.3",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @opsswarm/server --filter @opsswarm/web dev",
+    "build": "pnpm -r --filter @opsswarm/shared build && pnpm -r --filter @opsswarm/server --filter @opsswarm/web build",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @opsswarm/shared test && pnpm --filter @opsswarm/server test",
+    "test:e2e": "pnpm --filter @opsswarm/web exec playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "pnpm --filter @opsswarm/server db:generate",
+    "db:migrate": "pnpm --filter @opsswarm/server db:migrate"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@types/node": "^24.1.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild"
+    ]
+  }
+}

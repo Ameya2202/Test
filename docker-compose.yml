@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    environment:
+      PORT: 3001
+      HOST: 0.0.0.0
+      DATABASE_URL: /data/opsswarm.db
+    volumes:
+      - opsswarm-data:/data
+    ports:
+      - '3001:3001'
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: web
+    ports:
+      - '8080:80'
+    depends_on:
+      - api
+
+volumes:
+  opsswarm-data:
